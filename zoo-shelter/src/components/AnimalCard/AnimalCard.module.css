@@ -1,0 +1,211 @@
+.animalCardContainer {
+    margin: 100px;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
+}
+
+.likeBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(4px);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.cardInContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.imageContainer {
+    width: auto;
+    height: 155px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titleContainer {
+    padding: 0px 15px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3E3E3E;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.aboutAnimalInfo {
+    padding: 10px 20px;
+}
+
+.aboutAnimalInfoFirstRow {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.aboutAnimalInfoFirstRow li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 15px; /* Add padding to create space after the vertical line */
+    position: relative; /* Required for positioning the pseudo-element */
+}
+
+.aboutAnimalInfoFirstRow li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%; /* Adjusted to center the border vertically */
+    height: 50%; /* Set the height of the border */
+    width: 1px; /* Border width */
+    background-color: #707070; /* Border color */
+}
+
+.aboutAnimalInfoFirstRow li:first-child {
+    margin-left: -15px;
+}
+
+.aboutAnimalInfoFirstRow li:first-child::before {
+    display: none; /* Remove the border for the first element */
+}
+
+/* Adjusted styles to ensure text stays in one row */
+.aboutAnimalInfoFirstRowText {
+    font-size: 14px;
+    color: #3E3E3E;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.aboutAnimalInfoSecondRow {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.aboutAnimalInfoSecondRowText {
+    font-size: 14px;
+    color: #3E3E3E;
+}
+
+.takenByContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-top: 1px solid #E0E0E0;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.takenByImage {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.takenByText {
+    font-size: 14px;
+    color: #3E3E3E;
+}
+
+.buttonsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 7px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.button1{
+    border-radius: 4px;
+    border: 1px solid #FFC107;
+    background: rgba(255, 193, 7, 0.20);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.button1:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button1:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button2 {
+    grid-column: span 2 / span 2;
+    border-radius: 4px;
+    border: 1px solid #FFC107;
+    background: rgba(255, 193, 7, 0.50);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button2:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button2:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button3 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 2;
+    border-radius: 4px;
+    border: 1px solid #2A806B;
+    background: #2A806B;
+    text-align: center;
+    padding: 16px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button3:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button3:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

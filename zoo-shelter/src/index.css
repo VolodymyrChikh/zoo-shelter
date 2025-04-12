@@ -1,0 +1,10 @@
+body {
+    display: block;
+    margin: 0;
+    background-color: #f7f7f1;
+}
+
+::selection {
+    color: #c7bfbf;
+    background: #9b4d57;
+}
