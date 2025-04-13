@@ -84,7 +84,6 @@ input:focus, select:focus {
     background-color: #1E5F4E;
 }
 
-/* Mobile responsive styles */
 @media screen and (max-width: 768px) {
     .signUpAsShelterContainer {
         padding: 30px 15px;

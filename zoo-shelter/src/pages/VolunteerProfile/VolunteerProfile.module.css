@@ -177,7 +177,6 @@ a {
     gap: 4rem;
 }
 
-/* Media queries for responsive design */
 @media screen and (max-width: 768px) {
     .container {
         padding: 1rem;

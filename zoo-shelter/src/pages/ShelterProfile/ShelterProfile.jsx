@@ -96,7 +96,6 @@ const ShelterProfile = () => {
         <div className={styles.otherAnimalsSection}>
           <h2 className={styles.sectionTitle}>ОГОЛОШЕННЯ</h2>
           <div className={styles.otherAnimalsContainer}>
-            {/* Other animals would be dynamically generated here */}
             {[1, 2, 3, 4].map((item) => (
                 <AnimalCard 
                   key={item}

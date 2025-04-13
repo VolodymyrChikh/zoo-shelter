@@ -9,13 +9,10 @@ const AnimalCard = (props) => {
     const [isLiked, setIsLiked] = useState(props.isLiked || false);
 
     const handleMoreClick = () => {
-        // Navigate to the animal details page with the animal's ID
-        // Using a default ID of 1 for now, ideally would use props.animalId
         navigate(`/animal/${props.animalId || 1}`);
     };
 
     const handleLikeClick = () => {
-        // Toggle the liked state
         setIsLiked(!isLiked);
         console.log('Like button clicked!');
     }

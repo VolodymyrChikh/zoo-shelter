@@ -16,7 +16,6 @@ const SendAnnouncment = () => {
   });
 
   const handlePhotoUpload = (e) => {
-    // Handle photo upload logic here
     console.log('Photo selected');
   };
 
@@ -31,7 +30,6 @@ const SendAnnouncment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted', formData);
-    // Submit logic here
   };
 
   return (

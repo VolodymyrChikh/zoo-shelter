@@ -94,7 +94,6 @@
     background-color: #1E5F4E;
 }
 
-/* Responsive styles for mobile */
 @media screen and (max-width: 768px) {
     .signUpAsTitle {
         font-size: 32px;

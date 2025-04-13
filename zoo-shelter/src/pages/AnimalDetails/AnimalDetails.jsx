@@ -10,7 +10,6 @@ const AnimalDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   
-  // This would typically come from an API call using the ID
   const animalData = {
     id: id || '1',
     name: 'ЛАКІ',
@@ -24,12 +23,10 @@ const AnimalDetails = () => {
   };
 
   const handleDonate = () => {
-    // Handle donation logic
     console.log('Donate to', animalData.name);
   };
 
   const handleAdopt = () => {
-    // Handle adoption logic
     console.log('Adopt', animalData.name);
   };
 
@@ -147,7 +144,6 @@ const AnimalDetails = () => {
         <div className={styles.otherAnimalsSection}>
           <h2 className={styles.sectionTitle}>ІНШІ ТВАРИНКИ</h2>
           <div className={styles.otherAnimalsContainer}>
-            {/* Other animals would be dynamically generated here */}
             {[1, 2, 3, 4].map((item) => (
                 <AnimalCard className={styles.animalCard} onClick={() => navigate(`/animal/${item}`)} animalImageLink={animalImage} />
             ))}

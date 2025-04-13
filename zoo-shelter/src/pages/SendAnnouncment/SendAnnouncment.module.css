@@ -147,7 +147,6 @@ label {
   background-color: #1e6c52;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .formContent {
     flex-direction: column;

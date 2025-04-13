@@ -139,7 +139,6 @@
     transform: rotate(45deg);
 }
 
-/* Mobile Filter Toggle */
 .mobileFilterToggle {
     display: none;
     width: 100%;
@@ -154,7 +153,6 @@
     cursor: pointer;
 }
 
-/* Responsive styles */
 @media (max-width: 991px) {
     .cardsContainer {
         justify-content: center;

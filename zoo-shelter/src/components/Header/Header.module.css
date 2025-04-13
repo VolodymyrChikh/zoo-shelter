@@ -87,7 +87,6 @@
     font-size: 18px;
 }
 
-/* Mobile menu button styles */
 .mobileMenuButton {
     display: none;
     background: none;
@@ -102,7 +101,6 @@
     height: 24px;
 }
 
-/* Add media queries for mobile devices */
 @media (max-width: 992px) {
     .headerTitle {
         margin-left: 20px;

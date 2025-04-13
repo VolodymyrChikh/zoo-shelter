@@ -87,18 +87,18 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    padding-left: 15px; /* Add padding to create space after the vertical line */
-    position: relative; /* Required for positioning the pseudo-element */
+    padding-left: 15px; 
+    position: relative;
 }
 
 .aboutAnimalInfoFirstRow li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 25%; /* Adjusted to center the border vertically */
-    height: 50%; /* Set the height of the border */
-    width: 1px; /* Border width */
-    background-color: #707070; /* Border color */
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: #707070;
 }
 
 .aboutAnimalInfoFirstRow li:first-child {
@@ -106,14 +106,13 @@
 }
 
 .aboutAnimalInfoFirstRow li:first-child::before {
-    display: none; /* Remove the border for the first element */
+    display: none;
 }
 
-/* Adjusted styles to ensure text stays in one row */
 .aboutAnimalInfoFirstRowText {
     font-size: 14px;
     color: #3E3E3E;
-    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    white-space: nowrap;
 }
 
 .aboutAnimalInfoSecondRow {
@@ -224,7 +223,6 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Add media queries for mobile devices */
 @media (max-width: 768px) {
     .animalCardContainer {
         padding: 10px;
@@ -258,7 +256,6 @@
     }
 }
 
-/* Enhanced media queries for mobile devices */
 @media (max-width: 768px) {
     .animalCardContainer {
         display: flex;

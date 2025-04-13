@@ -24,7 +24,6 @@ function App() {
         <Route path="/volunteer-profile/me" element={<VolunteerProfile />} />
         <Route path="/volunteer-profile" element={<VolunteerProfileToSee />} />
         <Route path="/shelter-profile" element={<ShelterProfile />} />
-        {/* Redirect to SignUpAs if no match */}
         <Route path="*" element={<div style={{ color: 'red', fontSize: '48px', }}>404 Not Found</div>} />
       </Routes>
     </Router>
