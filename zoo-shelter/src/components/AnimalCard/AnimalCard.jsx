@@ -42,7 +42,7 @@ const AnimalCard = (props) => {
                     </div>
                     
                     <div className={styles.titleContainer}>
-                        <h2 className={styles.title}>Laki</h2>
+                        <h2 className={styles.title}>Лакі</h2>
                     </div>
                     <div className={styles.aboutAnimalInfo}>
                         <ul className={styles.aboutAnimalInfoFirstRow}>

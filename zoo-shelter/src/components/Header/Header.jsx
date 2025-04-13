@@ -53,7 +53,6 @@ const Header = () => {
                 
                 <div className={`${styles.headerNavLinks} ${isMobileMenuOpen ? styles.active : ''}`}>
                     <ul className={styles.headerNavLinksText}>
-                        <li><a href="/main">Головна</a></li>
                         <li><a href="/catalog">Каталог</a></li>
                         <li><a href="/send-announcment">Подати оголошення</a></li>
                         <li><a href="/ask-form">Форма запиту</a></li>
