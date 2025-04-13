@@ -1,7 +1,3 @@
-.animalCardContainer {
-    margin: 100px;
-}
-
 .card {
     width: 300px;
     border: 1px solid #E0E0E0;
@@ -10,6 +6,10 @@
     background-color: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Nunito', sans-serif;
+}
+
+.likeAndImageContainer {
+    position: relative;
 }
 
 .likeBackground {
@@ -42,6 +42,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.likeContainer {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.likeContainer svg {
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.8));
 }
 
 .titleContainer {
@@ -208,4 +222,127 @@
 
 .button3:active {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add media queries for mobile devices */
+@media (max-width: 768px) {
+    .animalCardContainer {
+        padding: 10px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .likeAndImageContainer {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        width: 100%;
+    }
+
+    .titleContainer h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .aboutAnimalInfo {
+        font-size: 14px;
+    }
+
+    .buttonsContainer button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Enhanced media queries for mobile devices */
+@media (max-width: 768px) {
+    .animalCardContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .imageContainer {
+        height: 140px;
+    }
+
+    .likeContainer {
+        top: 20px;
+        right: 20px;
+    }
+
+    .aboutAnimalInfoFirstRow {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .buttonsContainer {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .button1, .button2, .button3 {
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .takenByContainer {
+        width: 80%;
+    }
+
+    .takenByText {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .imageContainer {
+        height: 130px;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .aboutAnimalInfoFirstRowText,
+    .aboutAnimalInfoSecondRowText {
+        font-size: 12px;
+    }
+
+    .aboutAnimalInfoFirstRow {
+        gap: 8px;
+    }
+
+    .aboutAnimalInfoFirstRow li {
+        padding-left: 10px;
+    }
+
+    .aboutAnimalInfoFirstRow li:first-child {
+        margin-left: -10px;
+    }
+
+    .buttonsContainer {
+        gap: 5px;
+        max-width: 280px;
+    }
+
+    .button1, .button2, .button3 {
+        padding: 10px 0;
+        font-size: 14px;
+    }
 }

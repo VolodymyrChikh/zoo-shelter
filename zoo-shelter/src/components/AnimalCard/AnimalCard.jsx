@@ -1,8 +1,25 @@
 import styles from "./AnimalCard.module.css";
 import PropTypes from 'prop-types';
-import takenByImageLogo from '../../assets/images/domivka-logo.png'
+import takenByImageLogo from '../../assets/images/domivka-logo.png';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const AnimalCard = (props) => {
+    const navigate = useNavigate();
+    const [isLiked, setIsLiked] = useState(props.isLiked || false);
+
+    const handleMoreClick = () => {
+        // Navigate to the animal details page with the animal's ID
+        // Using a default ID of 1 for now, ideally would use props.animalId
+        navigate(`/animal/${props.animalId || 1}`);
+    };
+
+    const handleLikeClick = () => {
+        // Toggle the liked state
+        setIsLiked(!isLiked);
+        console.log('Like button clicked!');
+    }
+
     return (
         <div className={styles.animalCardContainer}>
             <div className={styles.card}>
@@ -11,13 +28,22 @@ const AnimalCard = (props) => {
                         <div className={styles.imageContainer}>
                             <img src={props.animalImageLink} alt="Animal" className={styles.image} />
                         </div>
-                        {/* <div className={styles.likeContainer}>
-                            <div className={styles.likeBackground}></div>
+                        <div 
+                            className={styles.likeContainer} 
+                            onClick={handleLikeClick}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <div 
+                                className={styles.likeBackground}
+                                style={{ backgroundColor: isLiked ? 'rgb(42, 128, 107, 1)' : '' }}
+                            ></div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="25" viewBox="0 0 28 25" fill="none">
-                                <path d="M24.9852 3.01477C24.3468 2.37603 23.5887 1.86933 22.7544 1.52363C21.9201 1.17793 21.0258 0.999992 20.1227 0.999992C19.2196 0.999992 18.3253 1.17793 17.491 1.52363C16.6567 1.86933 15.8987 2.37603 15.2602 3.01477L13.9352 4.33977L12.6102 3.01477C11.3206 1.72516 9.5715 1.00066 7.74771 1.00066C5.92392 1.00066 4.17482 1.72516 2.88521 3.01477C1.59559 4.30439 0.871094 6.05348 0.871094 7.87727C0.871094 9.70107 1.59559 11.4502 2.88521 12.7398L4.21021 14.0648L13.9352 23.7898L23.6602 14.0648L24.9852 12.7398C25.624 12.1013 26.1306 11.3433 26.4764 10.509C26.8221 9.67464 27 8.78038 27 7.87727C27 6.97416 26.8221 6.0799 26.4764 5.24558C26.1306 4.41126 25.624 3.65322 24.9852 3.01477Z" fill="white" fill-opacity="0.65" stroke="#3E3E3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path style={{fill: isLiked ? 'rgba(42, 128, 107, 1)' : ''}}
+                                 d="M24.9852 3.01477C24.3468 2.37603 23.5887 1.86933 22.7544 1.52363C21.9201 1.17793 21.0258 0.999992 20.1227 0.999992C19.2196 0.999992 18.3253 1.17793 17.491 1.52363C16.6567 1.86933 15.8987 2.37603 15.2602 3.01477L13.9352 4.33977L12.6102 3.01477C11.3206 1.72516 9.5715 1.00066 7.74771 1.00066C5.92392 1.00066 4.17482 1.72516 2.88521 3.01477C1.59559 4.30439 0.871094 6.05348 0.871094 7.87727C0.871094 9.70107 1.59559 11.4502 2.88521 12.7398L4.21021 14.0648L13.9352 23.7898L23.6602 14.0648L24.9852 12.7398C25.624 12.1013 26.1306 11.3433 26.4764 10.509C26.8221 9.67464 27 8.78038 27 7.87727C27 6.97416 26.8221 6.0799 26.4764 5.24558C26.1306 4.41126 25.624 3.65322 24.9852 3.01477Z" fill="white" fill-opacity="0.65" stroke="#3E3E3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </div>  */}
+                        </div>
                     </div>
+                    
                     <div className={styles.titleContainer}>
                         <h2 className={styles.title}>Laki</h2>
                     </div>
@@ -70,21 +96,23 @@ const AnimalCard = (props) => {
                     </div>
                     <div className={styles.takenByContainer}>
                         <img src={takenByImageLogo} alt="Domivka" className={styles.takenByImage} />
-                        <span className={styles.takenByText}> Притулок “Домівка Врятованих Тварин”</span>
+                        <span className={styles.takenByText}> Притулок "Домівка Врятованих Тварин"</span>
                     </div>
                 </div>
-                </div>
-                <div className={styles.buttonsContainer}>
-                    <button className={styles.button1}>Більше</button>
-                    <button className={styles.button2}>Задонатити</button>
-                    <button className={styles.button3}>Удочирити</button>
-                </div>
             </div>
+            <div className={styles.buttonsContainer}>
+                <button className={styles.button1} onClick={handleMoreClick}>Більше</button>
+                <button className={styles.button2}>Задонатити</button>
+                <button className={styles.button3}>Удочирити</button>
+            </div>
+        </div>
     );
 }
 
 AnimalCard.propTypes = {
-    animalImageLink: PropTypes.string.isRequired
+    animalImageLink: PropTypes.string.isRequired,
+    animalId: PropTypes.string,
+    isLiked: PropTypes.bool
 };
 
 export default AnimalCard;

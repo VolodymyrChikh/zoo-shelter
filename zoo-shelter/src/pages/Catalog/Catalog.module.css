@@ -1,0 +1,221 @@
+.mainPageContainer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.contentContainer {
+    width: 100%;
+}
+
+.filtersAndCardsContainer {
+    display: flex;
+    margin-top: 30px;
+    column-gap: 50px;
+    margin-left: 8%;
+}
+
+.filtersSideContainer {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.filtersContainer {
+    border-radius: 8px;
+}
+
+.filterSection {
+    padding: 0;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.filterSection:last-child {
+    border-bottom: none;
+}
+
+.filterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.filterHeader h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.arrow {
+    font-size: 12px;
+    color: #888;
+}
+
+.arrowIcon {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+}
+
+.filterContent {
+    padding: 0px 20px 15px;
+}
+
+.selectContainer {
+    width: 100%;
+}
+
+.citySelect {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    background-color: white;
+}
+
+.checkboxContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.checkboxContainer label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkboxContainer input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+}
+
+.checkboxContainer input[type="checkbox"]:checked {
+    background-color: #FFC107;
+    border-color: #FFC107;
+}
+
+.checkboxContainer input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Mobile Filter Toggle */
+.mobileFilterToggle {
+    display: none;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .cardsContainer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .filtersAndCardsContainer {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+        align-items: center;
+    }
+
+    .filtersSideContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cardsContainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .mobileFilterToggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .filtersAndCardsContainer {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .cardsContainer {
+        gap: 15px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .filterHeader h2 {
+        font-size: 12px;
+    }
+
+    .filterHeader {
+        padding: 12px 15px;
+    }
+
+    .filterContent {
+        padding: 0px 15px 12px;
+    }
+
+    .checkboxContainer label {
+        font-size: 13px;
+    }
+}

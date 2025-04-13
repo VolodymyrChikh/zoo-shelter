@@ -1,0 +1,149 @@
+.signUpAsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #F9F9F9;
+    min-height: 100vh;
+}
+
+.signUpAsTitleContainer {
+    margin-bottom: 30px;
+}
+
+.signUpAsTitle {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    text-align: center;
+    line-height: 150%;
+}
+
+.signUpAsButtonsAndNextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.signUpAsButtonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.signUpAsButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.signUpAsButton {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signUpAsButton:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signUpAsButton:focus {
+    background-color: #F9F7F1;
+    border-color: #3e3e3e;
+    background-color: rgba(255, 193, 7, 0.50);
+    outline: none;
+}
+
+.signUpAsButtonText {
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #3E3E3E;
+    text-align: center;
+}
+
+.nextButtonContainer {
+    margin-top: 20px;
+}
+
+.nextButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #2A806B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+.nextButton:hover {
+    background-color: #1E5F4E;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+    .signUpAsTitle {
+        font-size: 32px;
+    }
+
+    .signUpAsButtonsContainer {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .signUpAsButton {
+        width: 140px;
+        height: 140px;
+    }
+
+    .signUpAsButtonText {
+        font-size: 16px;
+    }
+
+    .nextButton {
+        width: 170px;
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .signUpAsContainer {
+        padding: 30px 15px;
+    }
+    
+    .signUpAsTitle {
+        font-size: 28px;
+    }
+
+    .signUpAsButton {
+        width: 120px;
+        height: 120px;
+    }
+
+    .signUpAsButtonsAndNextContainer {
+        gap: 25px;
+    }
+
+    .signUpAsButtonsContainer {
+        gap: 20px;
+    }
+
+    .nextButtonContainer {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,266 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'FixelText-Regular', sans-serif;
+}
+
+.profileHeader {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.profileImageContainer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileInfo {
+    flex-grow: 1;
+    width: 70%;
+}
+
+.contactIcons {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.role {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.locationAndContact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.description {
+    margin: 1rem 0;
+    line-height: 1.5;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.writeButton, .donateButton, .askFormButton, .giveAnimalButton {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.writeButton {
+    background-color: rgb(255, 193, 7, 0.5);
+    border: 1px solid rgb(255, 193, 7, 1);
+    color: #000;
+    width: 16.6%;
+}
+
+.donateButton {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    width: 25%;
+}
+
+.askFormButton {
+    background-color: rgb(42, 128, 107, 0.5);
+    color: black;
+    border: 1px solid #2A806B;
+    width: 16.6%;
+}
+
+.giveAnimalButton {
+    background-color: #2A806B;
+    color: white;
+    border: none;
+    width: 41.6%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.announcementsSection {
+    margin-top: 3rem;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.announcementsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.actionButtonsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    gap: 1rem;
+}
+
+.moreButton, .createButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.moreButton {
+    background-color: #fff;
+    border: 1px solid #2A806B;
+    color: #2A806B;
+}
+
+.createButton {
+    background-color: #2A806B;
+    color: white;
+    border: none;
+}
+
+.otherAnimalsSection {
+    margin-top: 3rem;
+}
+
+.sectionTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.otherAnimalsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 4rem;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .profileHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profileImageContainer {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profileInfo {
+        width: 100%;
+    }
+
+    .locationAndContact {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .contactIcons {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .location {
+        justify-content: center;
+    }
+
+    .description {
+        text-align: left;
+    }
+
+    .actionButtons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .writeButton, .donateButton, .askFormButton, .giveAnimalButton {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .otherAnimalsContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .profileHeader {
+        flex-direction: row;
+    }
+
+    .profileImageContainer {
+        width: 160px;
+        height: 160px;
+    }
+
+    .actionButtons {
+        flex-wrap: wrap;
+    }
+
+    .writeButton, .donateButton, .askFormButton, .giveAnimalButton {
+        width: calc(50% - 0.5rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .otherAnimalsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
